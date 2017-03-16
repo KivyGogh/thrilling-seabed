@@ -22,3 +22,8 @@ function randomColor() {
 	col[num] = 0;
 	return "rgba(" + col[0] + "," + col[1] + "," + col[2] + ",";
 }
+
+function lerpDistance(aim, cur, ratio) {
+	var delta = cur - aim;
+	return aim + delta * ratio;
+}
