@@ -32,6 +32,13 @@ function inOboundary(arrX, arrY, l, r, t, b) { //在l r t b范围内的检测
 	return arrX > l && arrX < r && arrY > t && arrY < b;
 }
 
+function rgbColor(r, g, b) {
+	r = Math.round(r * 256);
+	g = Math.round(g * 256);
+	b = Math.round(b * 256);
+	return "rgba(" + r + "," + g + "," + b + ",1)";
+}
+
 function rgbNum(r, g, b) {
 	r = Math.round(r * 256);
 	g = Math.round(g * 256);
