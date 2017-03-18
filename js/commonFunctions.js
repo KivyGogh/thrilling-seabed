@@ -45,3 +45,8 @@ function rgbNum(r, g, b) {
 	b = Math.round(b * 256);
 	return "rgba(" + r + "," + g + "," + b;
 }
+
+function rnd(m) {
+	var n = m || 1;
+	return Math.random() * n;
+}
