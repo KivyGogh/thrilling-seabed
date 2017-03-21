@@ -50,3 +50,20 @@ function rnd(m) {
 	var n = m || 1;
 	return Math.random() * n;
 }
+
+function rateRandom(m, n) {
+	var sum = 0;
+	for (var i = 1; i < (n - m); i++) {
+		sum += i;
+
+	}
+
+	var ran = Math.random() * sum;
+
+	for (var i = 1; i < (n - m); i++) {
+		ran -= i;
+		if (ran < 0) {
+			return i - 1 + m;
+		}
+	}
+}
