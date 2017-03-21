@@ -76,3 +76,7 @@ function distance(x1, y1, x2, y2, l) {
 	}
 	return false;
 }
+
+function AABBbox(object1, w1, h1, object2, w2, h2, overlap) {
+	A1 = object1.x + overlap;
+	B1 = object1.x + w1 - overlap;
