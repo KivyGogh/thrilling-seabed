@@ -80,3 +80,14 @@ function distance(x1, y1, x2, y2, l) {
 function AABBbox(object1, w1, h1, object2, w2, h2, overlap) {
 	A1 = object1.x + overlap;
 	B1 = object1.x + w1 - overlap;
+	C1 = object1.y + overlap;
+	D1 = object1.y + h1 - overlap;
+
+	A2 = object2.x + overlap;
+	B2 = object2.x + w2 - overlap;
+	C2 = object2.y + overlap;
+	D2 = object2.y + h2 - overlap;
+
+	if (A1 > B2 || B1 < A2 || C1 > D2 || D1 < C2) return false;
+	else return true;
+}
