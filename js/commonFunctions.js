@@ -97,3 +97,8 @@ function dis2(x, y, x0, y0) {
 	var dy = y - y0;
 	return dx * dx + dy * dy;
 }
+
+function rndi2(m, n) {
+	var a = Math.random() * (n - m) + m;
+	return Math.floor(a);
+}
