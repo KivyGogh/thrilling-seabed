@@ -91,3 +91,9 @@ function AABBbox(object1, w1, h1, object2, w2, h2, overlap) {
 	if (A1 > B2 || B1 < A2 || C1 > D2 || D1 < C2) return false;
 	else return true;
 }
+
+function dis2(x, y, x0, y0) {
+	var dx = x - x0;
+	var dy = y - y0;
+	return dx * dx + dy * dy;
+}
