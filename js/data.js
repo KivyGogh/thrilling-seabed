@@ -7,6 +7,14 @@ var dataObj = function()
 	this.alpha = 0;
 }
 
+dataObj.prototype.draw = function()
+{
+	
+}
+dataObj.prototype.addScore = function()
+{
+	
+}
 
 
 
