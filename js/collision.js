@@ -28,3 +28,22 @@ function momFruitsCollsion()
 	}
 	
 }
+//mom baby collision
+function momBabyCollision()
+{
+	if(data.fruitNum > 0 && !data.gameOver)
+	{
+		var l = calLength2(mom.x,mom.y,baby.x,baby.y);
+		if(l < 900)
+		{
+			//baby recover
+			baby.babyBodyCount = 0;
+			mom.momBodyCount = 0;
+			//score update
+			data.addScore();
+			//draw
+			halo.born(baby.x,baby.y);
+		}
+	}
+}
+
