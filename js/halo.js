@@ -16,7 +16,6 @@ haloObj.prototype.init = function()
 		this.r[i] = 0;
 	}
 }
-
 haloObj.prototype.draw = function()
 {
 	ctx1.save();
@@ -59,6 +58,7 @@ haloObj.prototype.born = function(x,y)
 		}
 	}
 }
+
 
 
 

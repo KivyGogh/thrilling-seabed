@@ -10,6 +10,7 @@ function calLength2(x1, y1, x2, y2) {
 	return Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
 }
 
+
 function randomColor() {
 	var col = [0, 1, 2];
 	col[0] = Math.random() * 100 + 155;
@@ -21,6 +22,14 @@ function randomColor() {
 	var num = Math.floor(Math.random() * 3);
 	col[num] = 0;
 	return "rgba(" + col[0] + "," + col[1] + "," + col[2] + ",";
+}
+
+
+function lerpAngle(a, b, t) {
+	var d = b - a;
+	if (d > Math.PI) d = d - 2 * Math.PI;
+	if (d < -Math.PI) d = d + 2 * Math.PI;
+	return a + d * t;
 }
 
 function lerpDistance(aim, cur, ratio) {
@@ -91,6 +100,7 @@ function AABBbox(object1, w1, h1, object2, w2, h2, overlap) {
 	if (A1 > B2 || B1 < A2 || C1 > D2 || D1 < C2) return false;
 	else return true;
 }
+
 
 function dis2(x, y, x0, y0) {
 	var dx = x - x0;
